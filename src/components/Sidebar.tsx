@@ -6,7 +6,9 @@ const Sidebar = () => {
 
   const navItems = [
     { path: "/", label: "Home", icon: Home },
-    { path: "/learn", label: "Learn", icon: BookOpen },
+    { path: "/refactoring", label: "Refactoring", icon: Code },
+    { path: "/design-patterns", label: "Design Patterns", icon: BookOpen },
+    { path: "/learn", label: "Interactive Lessons", icon: BookOpen },
     { path: "/quiz", label: "Quiz", icon: Trophy },
     { path: "/chat", label: "AI Chat", icon: MessageSquare },
   ];
