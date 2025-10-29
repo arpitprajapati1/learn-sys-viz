@@ -92,16 +92,16 @@ const Quiz = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background px-4 py-12">
-      <div className="container mx-auto max-w-3xl">
-        <div className="mb-8 text-center">
+    <div className="min-h-screen bg-background">
+      <div className="max-w-4xl mx-auto px-8 py-12">
+        <div className="mb-8">
           <h1 className="mb-2 text-4xl font-bold text-foreground">Test Your Knowledge</h1>
           <p className="text-lg text-muted-foreground">
             Question {currentQuestion + 1} of {questions.length}
           </p>
         </div>
 
-        <Card className="border-border bg-card p-8">
+        <Card className="border-2 border-border bg-card p-8">
           <h2 className="mb-6 text-2xl font-bold text-card-foreground">
             {questions[currentQuestion].question}
           </h2>

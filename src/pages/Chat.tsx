@@ -45,8 +45,8 @@ const Chat = () => {
 
   return (
     <div className="flex h-screen flex-col bg-background">
-      <div className="border-b border-border bg-card px-6 py-4">
-        <div className="container mx-auto flex items-center gap-3">
+      <div className="border-b-2 border-border bg-card px-8 py-4">
+        <div className="max-w-5xl mx-auto flex items-center gap-3">
           <Bot className="h-8 w-8 text-primary" aria-hidden="true" />
           <div>
             <h1 className="text-2xl font-bold text-foreground">AI Learning Assistant</h1>
@@ -55,15 +55,15 @@ const Chat = () => {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-4 py-6">
-        <div className="container mx-auto max-w-3xl space-y-4">
+      <div className="flex-1 overflow-y-auto px-8 py-6">
+        <div className="max-w-5xl mx-auto space-y-4">
           {messages.map((message, index) => (
             <div
               key={index}
               className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
             >
               <Card
-                className={`max-w-[80%] border-border p-4 ${
+                className={`max-w-[80%] border-2 border-border p-4 ${
                   message.role === "user"
                     ? "bg-primary text-primary-foreground"
                     : "bg-card text-card-foreground"
@@ -76,8 +76,8 @@ const Chat = () => {
         </div>
       </div>
 
-      <div className="border-t border-border bg-card px-4 py-4">
-        <div className="container mx-auto max-w-3xl">
+      <div className="border-t-2 border-border bg-card px-8 py-4">
+        <div className="max-w-5xl mx-auto">
           <form
             onSubmit={(e) => {
               e.preventDefault();

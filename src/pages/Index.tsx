@@ -1,93 +1,134 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Sparkles, BookOpen, MessageSquare, Trophy, ArrowRight } from "lucide-react";
+import { Sparkles, BookOpen, MessageSquare, Trophy, ArrowRight, Database, Zap, Users } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/30">
+    <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-5xl font-bold leading-tight text-foreground md:text-6xl">
-            Master System Design
-            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Through Interactive Learning
-            </span>
-          </h1>
-          <p className="mb-8 text-xl text-muted-foreground">
-            Learn complex concepts through engaging videos, interactive quizzes, and AI-powered guidance.
-            Built for visual learners and accessible to everyone.
+      <section className="px-8 py-16 max-w-5xl mx-auto">
+        <h1 className="mb-6 text-5xl font-bold leading-tight text-foreground">
+          Hello, world!
+        </h1>
+        <div className="prose prose-lg max-w-none">
+          <p className="text-lg text-foreground leading-relaxed mb-4">
+            <strong>System Design Guru</strong> makes it easy for you to discover everything you need to know about 
+            scalable architectures, distributed systems, database design, and other essential engineering topics.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              <Link to="/learn" aria-label="Start learning system design">
-                Start Learning <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-              </Link>
+          <p className="text-base text-muted-foreground leading-relaxed mb-4">
+            This site shows you the big picture, how all these concepts intersect, work together, and apply to real-world 
+            systems. We combine visual learning with interactive examples to make complex topics simple and accessible. 
+            Our goal is to bridge the gap between theory and practice for engineers at all levels.
+          </p>
+          <p className="text-sm text-muted-foreground italic mb-8">
+            <strong>P.S.</strong> Track progress via email updates and join our growing community of learners.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 mt-12">
+          <Card className="border-2 border-border bg-card p-6">
+            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <MessageSquare className="h-6 w-6 text-primary" />
+              Subscribe for updates
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Enter your email to track the project progress. You can expect no more than one email per month. No spam, promise.
+            </p>
+            <div className="flex gap-2">
+              <input 
+                type="email" 
+                placeholder="Email" 
+                className="flex-1 px-4 py-2 border border-input rounded-md bg-background"
+                aria-label="Email address"
+              />
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                Subscribe
+              </Button>
+            </div>
+          </Card>
+
+          <Card className="border-2 border-secondary/30 bg-card p-6">
+            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Users className="h-6 w-6 text-secondary" />
+              Community
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Join our community of learners and share your journey with others learning system design.
+            </p>
+            <Button variant="outline" className="w-full" asChild>
+              <Link to="/chat">Join Discussion</Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/chat" aria-label="Chat with AI assistant">
-                Chat with AI <MessageSquare className="ml-2 h-5 w-5" aria-hidden="true" />
-              </Link>
-            </Button>
+          </Card>
+        </div>
+      </section>
+
+      {/* Topics Section */}
+      <section className="px-8 py-16 bg-muted/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-border bg-card p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
+              <Database className="h-16 w-16 text-primary mb-4" />
+              <h3 className="text-2xl font-bold mb-3 text-card-foreground">Database Design</h3>
+              <p className="text-muted-foreground mb-6">
+                Database design is the foundation of scalable systems. Learn about normalization, indexing, 
+                sharding, and how to choose the right database for your use case.
+              </p>
+              <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+                <Link to="/learn">More about Databases →</Link>
+              </Button>
+            </Card>
+
+            <Card className="border-border bg-card p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
+              <Zap className="h-16 w-16 text-secondary mb-4" />
+              <h3 className="text-2xl font-bold mb-3 text-card-foreground">System Scalability</h3>
+              <p className="text-muted-foreground mb-6">
+                Scalability is about handling growth efficiently. Discover load balancing, caching strategies, 
+                CDNs, and horizontal vs vertical scaling patterns.
+              </p>
+              <Button className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90" asChild>
+                <Link to="/learn">More about Scalability →</Link>
+              </Button>
+            </Card>
+
+            <Card className="border-border bg-card p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
+              <Trophy className="h-16 w-16 text-accent mb-4" />
+              <h3 className="text-2xl font-bold mb-3 text-card-foreground">Design Patterns</h3>
+              <p className="text-muted-foreground mb-6">
+                Design patterns are proven solutions to common problems. Master microservices, event-driven 
+                architectures, and distributed system patterns.
+              </p>
+              <Button className="w-full bg-accent text-accent-foreground hover:bg-accent/90" asChild>
+                <Link to="/learn">More about Patterns →</Link>
+              </Button>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="container mx-auto px-4 py-16">
-        <h2 className="mb-12 text-center text-3xl font-bold text-foreground">
-          Why Learn With Us?
-        </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <Card className="border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)]">
-            <Sparkles className="mb-4 h-12 w-12 text-primary" aria-hidden="true" />
-            <h3 className="mb-2 text-xl font-bold text-card-foreground">AI-Powered</h3>
-            <p className="text-muted-foreground">
-              Get personalized recommendations and instant answers to your questions
-            </p>
-          </Card>
-
-          <Card className="border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)]">
-            <BookOpen className="mb-4 h-12 w-12 text-secondary" aria-hidden="true" />
-            <h3 className="mb-2 text-xl font-bold text-card-foreground">Video Lessons</h3>
-            <p className="text-muted-foreground">
-              Learn from curated YouTube content integrated seamlessly
-            </p>
-          </Card>
-
-          <Card className="border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)]">
-            <Trophy className="mb-4 h-12 w-12 text-accent" aria-hidden="true" />
-            <h3 className="mb-2 text-xl font-bold text-card-foreground">Interactive Quizzes</h3>
-            <p className="text-muted-foreground">
-              Test your knowledge with instant feedback and progress tracking
-            </p>
-          </Card>
-
-          <Card className="border-border bg-card p-6 shadow-[var(--shadow-card)] transition-all hover:shadow-[var(--shadow-elegant)]">
-            <MessageSquare className="mb-4 h-12 w-12 text-primary" aria-hidden="true" />
-            <h3 className="mb-2 text-xl font-bold text-card-foreground">Accessible</h3>
-            <p className="text-muted-foreground">
-              WCAG compliant with keyboard navigation and screen reader support
-            </p>
-          </Card>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <Card className="mx-auto max-w-3xl border-border bg-card p-12 shadow-[var(--shadow-elegant)]">
-          <h2 className="mb-4 text-3xl font-bold text-card-foreground">
-            Ready to Start Your Journey?
+      {/* Quick Start Section */}
+      <section className="px-8 py-16 max-w-5xl mx-auto">
+        <Card className="border-2 border-border bg-card p-12 text-center">
+          <BookOpen className="h-20 w-20 text-primary mx-auto mb-6" />
+          <h2 className="text-3xl font-bold mb-4 text-card-foreground">
+            Start Learning Today
           </h2>
-          <p className="mb-8 text-lg text-muted-foreground">
-            Join thousands of developers mastering system design concepts
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+            Begin your journey with interactive video lessons, hands-on quizzes, and AI-powered guidance. 
+            Learn at your own pace with content designed for visual learners.
           </p>
-          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link to="/learn" aria-label="Get started with learning">
-              Get Started Now
-            </Link>
-          </Button>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <Link to="/learn">
+                Browse Lessons <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link to="/quiz">
+                Take a Quiz <Trophy className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </Card>
       </section>
     </div>
