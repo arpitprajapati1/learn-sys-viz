@@ -29,8 +29,8 @@ All colors MUST be HSL.
     --ring: 10 78% 58%;
     --radius: 0.5rem;
     
-    --sidebar-bg: 10 78% 58%;
-    --sidebar-text: 0 0% 100%;
+    --sidebar-bg: 0 0% 88%;
+    --sidebar-text: 0 0% 15%;
     --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
 
     --sidebar-background: 0 0% 98%;
@@ -64,7 +64,7 @@ All colors MUST be HSL.
     --input: 0 0% 25%;
     --ring: 10 78% 58%;
     
-    --sidebar-bg: 10 68% 48%;
+    --sidebar-bg: 217 91% 25%;
     --sidebar-text: 0 0% 100%;
     --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
 
@@ -111,6 +111,41 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 215 25% 20%;
     --sidebar-border: 214 32% 85%;
     --sidebar-ring: 217 91% 60%;
+  }
+
+  .red {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 84% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 20% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 14 100% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 13% 91%;
+    --input: 0 13% 91%;
+    --ring: 0 72% 51%;
+    
+    --sidebar-bg: 0 72% 51%;
+    --sidebar-text: 0 0% 100%;
+    --shadow-card: 0 1px 3px 0 hsl(0 72% 51% / 0.1), 0 1px 2px 0 hsl(0 72% 51% / 0.06);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 0 72% 51%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 20% 96%;
+    --sidebar-accent-foreground: 0 0% 15%;
+    --sidebar-border: 0 13% 91%;
+    --sidebar-ring: 0 72% 51%;
   }
 }
 

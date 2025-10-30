@@ -1,4 +1,4 @@
-import { Moon, Sun, Palette } from "lucide-react";
+import { Moon, Sun, Palette, Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -18,6 +18,7 @@ export function ThemeToggle() {
           {theme === "light" && <Sun className="h-4 w-4" />}
           {theme === "dark" && <Moon className="h-4 w-4" />}
           {theme === "blue" && <Palette className="h-4 w-4" />}
+          {theme === "red" && <Flame className="h-4 w-4" />}
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
@@ -33,6 +34,10 @@ export function ThemeToggle() {
         <DropdownMenuItem onClick={() => setTheme("blue")}>
           <Palette className="mr-2 h-4 w-4" />
           Blue
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("red")}>
+          <Flame className="mr-2 h-4 w-4" />
+          Red
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
