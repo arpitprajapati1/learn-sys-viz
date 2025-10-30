@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Home, BookOpen, MessageSquare, Trophy, Code } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -53,6 +54,12 @@ const Sidebar = () => {
           })}
         </ul>
       </nav>
+
+      {/* Theme Toggle */}
+      <div className="px-6 py-3 border-t border-white/20 flex items-center justify-between">
+        <span className="text-sm opacity-90">Theme</span>
+        <ThemeToggle />
+      </div>
 
       {/* Footer */}
       <div className="p-6 border-t border-white/20 text-sm opacity-90">
