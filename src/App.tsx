@@ -7,6 +7,8 @@ import Sidebar from "./components/Sidebar";
 import Index from "./pages/Index";
 import Refactoring from "./pages/Refactoring";
 import DesignPatterns from "./pages/DesignPatterns";
+import CreationalPatterns from "./pages/CreationalPatterns";
+import StructuralPatterns from "./pages/StructuralPatterns";
 import Learn from "./pages/Learn";
 import Quiz from "./pages/Quiz";
 import Chat from "./pages/Chat";
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/refactoring" element={<Refactoring />} />
             <Route path="/design-patterns" element={<DesignPatterns />} />
+            <Route path="/creational-patterns" element={<CreationalPatterns />} />
+            <Route path="/structural-patterns" element={<StructuralPatterns />} />
             <Route path="/learn" element={<Learn />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/chat" element={<Chat />} />

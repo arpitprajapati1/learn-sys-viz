@@ -110,17 +110,22 @@ const DesignPatterns = () => {
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               {creationalPatterns.map((pattern) => (
-                <Card key={pattern.name} className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all">
-                  <div className="flex items-start gap-4">
-                    <span className="text-4xl">{pattern.icon}</span>
-                    <div>
-                      <h4 className="font-bold text-lg text-card-foreground mb-2">{pattern.name}</h4>
-                      <p className="text-sm text-muted-foreground">{pattern.description}</p>
+                <Link key={pattern.name} to="/creational-patterns">
+                  <Card className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all cursor-pointer">
+                    <div className="flex items-start gap-4">
+                      <span className="text-4xl">{pattern.icon}</span>
+                      <div>
+                        <h4 className="font-bold text-lg text-card-foreground mb-2">{pattern.name}</h4>
+                        <p className="text-sm text-muted-foreground">{pattern.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Link>
               ))}
             </div>
+            <Link to="/creational-patterns" className="inline-block mt-4 text-primary hover:underline font-semibold">
+              View all Creational Patterns →
+            </Link>
           </div>
 
           {/* Structural Patterns */}
@@ -134,17 +139,22 @@ const DesignPatterns = () => {
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               {structuralPatterns.map((pattern) => (
-                <Card key={pattern.name} className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all">
-                  <div className="flex items-start gap-4">
-                    <span className="text-4xl">{pattern.icon}</span>
-                    <div>
-                      <h4 className="font-bold text-lg text-card-foreground mb-2">{pattern.name}</h4>
-                      <p className="text-sm text-muted-foreground">{pattern.description}</p>
+                <Link key={pattern.name} to="/structural-patterns">
+                  <Card className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all cursor-pointer">
+                    <div className="flex items-start gap-4">
+                      <span className="text-4xl">{pattern.icon}</span>
+                      <div>
+                        <h4 className="font-bold text-lg text-card-foreground mb-2">{pattern.name}</h4>
+                        <p className="text-sm text-muted-foreground">{pattern.description}</p>
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Link>
               ))}
             </div>
+            <Link to="/structural-patterns" className="inline-block mt-4 text-primary hover:underline font-semibold">
+              View all Structural Patterns →
+            </Link>
           </div>
 
           {/* Behavioral Patterns */}
