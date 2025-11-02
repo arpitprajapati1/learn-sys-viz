@@ -35,16 +35,16 @@ const Learn = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto px-8 py-12">
-        <div className="mb-12">
-          <h1 className="mb-4 text-4xl font-bold text-foreground">Interactive Learning</h1>
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
+        <div className="mb-8 sm:mb-12">
+          <h1 className="mb-4 text-3xl sm:text-4xl font-bold text-foreground">Interactive Learning</h1>
           <p className="text-lg text-muted-foreground">
             Master System Design through engaging video lessons and interactive examples. Each topic includes 
             real-world case studies and practical demonstrations.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {topics.map((topic) => {
             const Icon = topic.icon;
             return (

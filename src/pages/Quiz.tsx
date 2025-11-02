@@ -69,8 +69,8 @@ const Quiz = () => {
   if (showResults) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-background px-4">
-        <Card className="w-full max-w-2xl border-border bg-card p-8 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-card-foreground">Quiz Complete!</h2>
+        <Card className="w-full max-w-2xl border-border bg-card p-6 sm:p-8 text-center">
+          <h2 className="mb-4 text-2xl sm:text-3xl font-bold text-card-foreground">Quiz Complete!</h2>
           <p className="mb-6 text-xl text-muted-foreground">
             You scored {score} out of {questions.length}
           </p>
@@ -93,16 +93,16 @@ const Quiz = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-8 py-12">
-        <div className="mb-8">
-          <h1 className="mb-2 text-4xl font-bold text-foreground">Test Your Knowledge</h1>
+      <div className="max-w-4xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="mb-2 text-3xl sm:text-4xl font-bold text-foreground">Test Your Knowledge</h1>
           <p className="text-lg text-muted-foreground">
             Question {currentQuestion + 1} of {questions.length}
           </p>
         </div>
 
-        <Card className="border-2 border-border bg-card p-8">
-          <h2 className="mb-6 text-2xl font-bold text-card-foreground">
+        <Card className="border-2 border-border bg-card p-4 sm:p-8">
+          <h2 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-card-foreground">
             {questions[currentQuestion].question}
           </h2>
 

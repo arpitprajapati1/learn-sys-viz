@@ -36,11 +36,11 @@ const Refactoring = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="mb-16">
+        <div className="mb-12 sm:mb-16">
           <Badge variant="secondary" className="mb-4">Code Quality</Badge>
-          <h1 className="mb-6 text-5xl font-bold text-foreground">Refactoring</h1>
+          <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">Refactoring</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Refactoring is the process of changing a software system in such a way that it does not alter 
             the external behavior of the code yet improves its internal structure. It's a disciplined way 
@@ -49,14 +49,14 @@ const Refactoring = () => {
         </div>
 
         {/* What is Refactoring */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <RefreshCw className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">What is Refactoring?</h2>
+            <RefreshCw className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">What is Refactoring?</h2>
           </div>
 
-          <Card className="p-8 mb-8 border-2 border-border bg-card">
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <Card className="p-4 sm:p-8 mb-8 border-2 border-border bg-card">
+            <div className="grid sm:grid-cols-2 gap-6 mb-8">
               <div className="bg-red-500/10 border-2 border-red-500/20 rounded-lg p-6">
                 <h3 className="font-bold text-lg mb-3 text-foreground flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-red-500" />
@@ -96,13 +96,13 @@ const Refactoring = () => {
         </section>
 
         {/* Code Smells */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <AlertTriangle className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">Code Smells</h2>
+            <AlertTriangle className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Code Smells</h2>
           </div>
 
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6">
             Code smells are indicators that something might be wrong with your code. They're not bugs—they don't 
             prevent the program from functioning. Instead, they suggest weaknesses in design that may slow down 
             development or increase the risk of bugs.
@@ -128,17 +128,17 @@ const Refactoring = () => {
         </section>
 
         {/* Refactoring Techniques */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <Code className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">Common Refactoring Techniques</h2>
+            <Code className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Common Refactoring Techniques</h2>
           </div>
 
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-base sm:text-lg text-muted-foreground mb-6">
             These are some of the most commonly used refactoring techniques that can dramatically improve your code quality.
           </p>
 
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 sm:grid-cols-2">
             {refactoringTechniques.map((technique) => (
               <Card key={technique.name} className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all">
                 <h3 className="font-bold text-xl text-card-foreground mb-3">{technique.name}</h3>
@@ -152,9 +152,9 @@ const Refactoring = () => {
         </section>
 
         {/* Refactoring Process Diagram */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6">The Refactoring Process</h2>
-          <Card className="p-8 border-2 border-border bg-card">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">The Refactoring Process</h2>
+          <Card className="p-4 sm:p-8 border-2 border-border bg-card">
             <div className="bg-muted/30 rounded-lg p-6">
               <svg viewBox="0 0 800 300" className="w-full h-auto">
                 {/* Step 1 */}
@@ -206,8 +206,8 @@ const Refactoring = () => {
 
         {/* When to Refactor */}
         <section>
-          <h2 className="text-3xl font-bold text-foreground mb-6">When Should You Refactor?</h2>
-          <Card className="p-8 border-2 border-border bg-card">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">When Should You Refactor?</h2>
+          <Card className="p-4 sm:p-8 border-2 border-border bg-card">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="bg-primary/10 rounded-full p-3">

@@ -32,11 +32,11 @@ const DesignPatterns = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="max-w-5xl mx-auto px-8 py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
         {/* Hero Section */}
-        <div className="mb-16">
+        <div className="mb-12 sm:mb-16">
           <Badge variant="secondary" className="mb-4">Software Design</Badge>
-          <h1 className="mb-6 text-5xl font-bold text-foreground">Design Patterns</h1>
+          <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">Design Patterns</h1>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Design patterns are typical solutions to commonly occurring problems in software design. 
             They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
@@ -44,14 +44,14 @@ const DesignPatterns = () => {
         </div>
 
         {/* What is a Pattern Section */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <Lightbulb className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">What is a Pattern?</h2>
+            <Lightbulb className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">What is a Pattern?</h2>
           </div>
           
-          <Card className="p-8 mb-8 border-2 border-border bg-card">
-            <p className="text-lg text-card-foreground mb-6 leading-relaxed">
+          <Card className="p-4 sm:p-8 mb-8 border-2 border-border bg-card">
+            <p className="text-base sm:text-lg text-card-foreground mb-6 leading-relaxed">
               A pattern is not a specific piece of code, but a general concept for solving a particular problem. 
               You can follow the pattern details and implement a solution that suits the realities of your own program.
             </p>
@@ -88,13 +88,13 @@ const DesignPatterns = () => {
         </section>
 
         {/* Catalog Section */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <BookOpen className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">Pattern Catalog</h2>
+            <BookOpen className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Pattern Catalog</h2>
           </div>
           
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8">
             Design patterns differ by their complexity, level of detail, and scale of applicability. 
             They can be categorized into three main groups:
           </p>
@@ -102,13 +102,13 @@ const DesignPatterns = () => {
           {/* Creational Patterns */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <Box className="h-7 w-7 text-primary" />
-              <h3 className="text-2xl font-bold text-foreground">Creational Patterns</h3>
+              <Box className="h-6 sm:h-7 w-6 sm:w-7 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Creational Patterns</h3>
             </div>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6">
               These patterns provide object creation mechanisms that increase flexibility and reuse of existing code.
             </p>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {creationalPatterns.map((pattern) => (
                 <Link key={pattern.name} to="/creational-patterns">
                   <Card className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all cursor-pointer">
@@ -131,13 +131,13 @@ const DesignPatterns = () => {
           {/* Structural Patterns */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <Share2 className="h-7 w-7 text-primary" />
-              <h3 className="text-2xl font-bold text-foreground">Structural Patterns</h3>
+              <Share2 className="h-6 sm:h-7 w-6 sm:w-7 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Structural Patterns</h3>
             </div>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6">
               These patterns explain how to assemble objects and classes into larger structures while keeping them flexible and efficient.
             </p>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {structuralPatterns.map((pattern) => (
                 <Link key={pattern.name} to="/structural-patterns">
                   <Card className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all cursor-pointer">
@@ -160,13 +160,13 @@ const DesignPatterns = () => {
           {/* Behavioral Patterns */}
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <Workflow className="h-7 w-7 text-primary" />
-              <h3 className="text-2xl font-bold text-foreground">Behavioral Patterns</h3>
+              <Workflow className="h-6 sm:h-7 w-6 sm:w-7 text-primary" />
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">Behavioral Patterns</h3>
             </div>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6">
               These patterns are concerned with algorithms and the assignment of responsibilities between objects.
             </p>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2">
               {behavioralPatterns.map((pattern) => (
                 <Card key={pattern.name} className="p-6 border-2 border-border hover:shadow-[var(--shadow-card)] transition-all">
                   <div className="flex items-start gap-4">
@@ -183,14 +183,14 @@ const DesignPatterns = () => {
         </section>
 
         {/* Code Examples Section */}
-        <section className="mb-16">
+        <section className="mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-6">
-            <Code2 className="h-8 w-8 text-primary" />
-            <h2 className="text-3xl font-bold text-foreground">Code Examples</h2>
+            <Code2 className="h-6 sm:h-8 w-6 sm:w-8 text-primary" />
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Code Examples</h2>
           </div>
           
-          <Card className="p-8 border-2 border-border bg-card">
-            <p className="text-lg text-muted-foreground mb-6">
+          <Card className="p-4 sm:p-8 border-2 border-border bg-card">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6">
               Ready to dive deeper? Explore practical implementations of these patterns in real code.
             </p>
             
@@ -222,9 +222,9 @@ const DesignPatterns = () => {
         </section>
 
         {/* Relationship Diagram */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Pattern Relationships</h2>
-          <Card className="p-8 border-2 border-border bg-card overflow-auto">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">Pattern Relationships</h2>
+          <Card className="p-4 sm:p-8 border-2 border-border bg-card overflow-auto">
             <div className="bg-muted/30 rounded-lg p-6">
               <svg viewBox="0 0 800 400" className="w-full h-auto">
                 {/* Creational Group */}
@@ -269,12 +269,12 @@ const DesignPatterns = () => {
 
         {/* Next Steps */}
         <section>
-          <Card className="p-8 bg-primary/5 border-2 border-primary">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
-            <p className="text-muted-foreground mb-6">
+          <Card className="p-6 sm:p-8 bg-primary/5 border-2 border-primary">
+            <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
+            <p className="text-sm sm:text-base text-muted-foreground mb-6">
               Continue your journey by exploring interactive lessons and practical examples.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/learn" 
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-all"

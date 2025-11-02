@@ -7,8 +7,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="px-8 py-16 max-w-5xl mx-auto">
-        <h1 className="mb-6 text-5xl font-bold leading-tight text-foreground">
+      <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-5xl mx-auto">
+        <h1 className="mb-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-foreground">
           Hello, world!
         </h1>
         <div className="prose prose-lg max-w-none">
@@ -26,9 +26,9 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
-          <Card className="border-2 border-border bg-card p-6">
-            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+        <div className="grid sm:grid-cols-2 gap-6 mt-12">
+          <Card className="border-2 border-border bg-card p-4 sm:p-6">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 flex items-center gap-2">
               <MessageSquare className="h-6 w-6 text-primary" />
               Subscribe for updates
             </h3>
@@ -39,10 +39,10 @@ const Index = () => {
               <input 
                 type="email" 
                 placeholder="Email" 
-                className="flex-1 px-4 py-2 border border-input rounded-md bg-background"
+                className="flex-1 px-3 sm:px-4 py-2 border border-input rounded-md bg-background text-sm"
                 aria-label="Email address"
               />
-              <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm px-3 sm:px-4">
                 Subscribe
               </Button>
             </div>
@@ -64,12 +64,12 @@ const Index = () => {
       </section>
 
       {/* Topics Section */}
-      <section className="px-8 py-16 bg-muted/30">
+      <section className="px-4 sm:px-8 py-12 sm:py-16 bg-muted/30">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-border bg-card p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
-              <Database className="h-16 w-16 text-primary mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-card-foreground">Database Design</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <Card className="border-border bg-card p-6 sm:p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
+              <Database className="h-12 sm:h-16 w-12 sm:w-16 text-primary mb-4" />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-card-foreground">Database Design</h3>
               <p className="text-muted-foreground mb-6">
                 Database design is the foundation of scalable systems. Learn about normalization, indexing, 
                 sharding, and how to choose the right database for your use case.
@@ -79,9 +79,9 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="border-border bg-card p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
-              <Zap className="h-16 w-16 text-secondary mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-card-foreground">System Scalability</h3>
+            <Card className="border-border bg-card p-6 sm:p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
+              <Zap className="h-12 sm:h-16 w-12 sm:w-16 text-secondary mb-4" />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-card-foreground">System Scalability</h3>
               <p className="text-muted-foreground mb-6">
                 Scalability is about handling growth efficiently. Discover load balancing, caching strategies, 
                 CDNs, and horizontal vs vertical scaling patterns.
@@ -91,9 +91,9 @@ const Index = () => {
               </Button>
             </Card>
 
-            <Card className="border-border bg-card p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
-              <Trophy className="h-16 w-16 text-accent mb-4" />
-              <h3 className="text-2xl font-bold mb-3 text-card-foreground">Design Patterns</h3>
+            <Card className="border-border bg-card p-6 sm:p-8 hover:shadow-[var(--shadow-card)] transition-shadow">
+              <Trophy className="h-12 sm:h-16 w-12 sm:w-16 text-accent mb-4" />
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-card-foreground">Design Patterns</h3>
               <p className="text-muted-foreground mb-6">
                 Design patterns are proven solutions to common problems. Master microservices, event-driven 
                 architectures, and distributed system patterns.
@@ -107,10 +107,10 @@ const Index = () => {
       </section>
 
       {/* Quick Start Section */}
-      <section className="px-8 py-16 max-w-5xl mx-auto">
-        <Card className="border-2 border-border bg-card p-12 text-center">
-          <BookOpen className="h-20 w-20 text-primary mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4 text-card-foreground">
+      <section className="px-4 sm:px-8 py-12 sm:py-16 max-w-5xl mx-auto">
+        <Card className="border-2 border-border bg-card p-6 sm:p-12 text-center">
+          <BookOpen className="h-16 sm:h-20 w-16 sm:w-20 text-primary mx-auto mb-6" />
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-card-foreground">
             Start Learning Today
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">

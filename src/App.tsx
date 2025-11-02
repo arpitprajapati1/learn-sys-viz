@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
+import { useState } from "react";
+import { Menu } from "lucide-react";
 import Sidebar from "./components/Sidebar";
 import Index from "./pages/Index";
 import Refactoring from "./pages/Refactoring";
@@ -17,7 +19,10 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" themes={["light", "dark", "blue", "red"]}>
       <TooltipProvider>
@@ -25,8 +30,18 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
         <div className="flex min-h-screen">
-          <Sidebar />
-          <main className="flex-1 ml-64">
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="lg:hidden fixed top-4 left-4 z-30 p-2 rounded-lg bg-[hsl(var(--sidebar-bg))] text-[hsl(var(--sidebar-text))] shadow-lg"
+            aria-label="Open menu"
+          >
+            <Menu className="h-6 w-6" />
+          </button>
+
+          <main className="flex-1 lg:ml-64 w-full">
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/refactoring" element={<Refactoring />} />
@@ -44,6 +59,7 @@ const App = () => (
     </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

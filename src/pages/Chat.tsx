@@ -45,17 +45,17 @@ const Chat = () => {
 
   return (
     <div className="flex h-screen flex-col bg-background">
-      <div className="border-b-2 border-border bg-card px-8 py-4">
+      <div className="border-b-2 border-border bg-card px-4 sm:px-8 py-4">
         <div className="max-w-5xl mx-auto flex items-center gap-3">
-          <Bot className="h-8 w-8 text-primary" aria-hidden="true" />
+          <Bot className="h-6 sm:h-8 w-6 sm:w-8 text-primary" aria-hidden="true" />
           <div>
-            <h1 className="text-2xl font-bold text-foreground">AI Learning Assistant</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-foreground">AI Learning Assistant</h1>
             <p className="text-sm text-muted-foreground">Ask questions about System Design</p>
           </div>
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto px-8 py-6">
+      <div className="flex-1 overflow-y-auto px-4 sm:px-8 py-6">
         <div className="max-w-5xl mx-auto space-y-4">
           {messages.map((message, index) => (
             <div
@@ -63,20 +63,20 @@ const Chat = () => {
               className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
             >
               <Card
-                className={`max-w-[80%] border-2 border-border p-4 ${
+                className={`max-w-[90%] sm:max-w-[80%] border-2 border-border p-3 sm:p-4 ${
                   message.role === "user"
                     ? "bg-primary text-primary-foreground"
                     : "bg-card text-card-foreground"
                 }`}
               >
-                <p>{message.content}</p>
+                <p className="text-sm sm:text-base">{message.content}</p>
               </Card>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="border-t-2 border-border bg-card px-8 py-4">
+      <div className="border-t-2 border-border bg-card px-4 sm:px-8 py-4">
         <div className="max-w-5xl mx-auto">
           <form
             onSubmit={(e) => {
